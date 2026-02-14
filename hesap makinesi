@@ -1,0 +1,48 @@
+#Kullanıcını iki sayi girerek toplama, çıkarma, çarpma ve bölme işlemleriniyapabileceği bir hesap makinesi programı yazınız.
+#Program şu özelliklere sahip olmalıdır:
+#Kullanıcıya yapmak istediği işlemi seçmesi için bir menü sunulmalıdır.
+# 1.Toplama
+# 2.Çıkarma
+# 3.Çarpma
+# 4.Bölme
+# 5.Çıkış
+#Kullanıcıdan geçerli bir işlem seçtikten sonra iki sayi girmesi istenilmelidir.
+#
+#İşlem sonucu ekrana yazdırılmalıdır.
+#Kullanıcı 5 girerek çıkış yapmadıkça program sürekli çalışmalıdır.
+#
+#Bölme işleminde sıfıra bölme durumu kontrol edilmelidir.
+
+while True:
+    print("\n---   MENÜ   ---")
+    print("1.Toplama")
+    print("2.Çikarma")
+    print("3.Çarpma")
+    print("4.Bölme")
+    print("5.Çikiş")
+
+    secim=input("Yapmak istediğiniz seçimi seçiniz (1-5):")
+
+    if secim == "5":
+       print("Programdan çikiliyor...")
+       break
+    elif secim in ["1", "2", "3", "4", "5"]:
+       sayi1=float(input("Lütfen birinci sayiyi giriniz: "))
+       sayi2=float(input("Lütfen ikinci sayiyi giriniz: "))
+
+       if secim == "1":
+          print(f"Sonuç: {sayi1} + {sayi2} = {sayi1 + sayi2}")
+       elif secim == "2":
+          print(f"Sonuç: {sayi1} - {sayi2} = {sayi1 - sayi2} ")
+       elif secim == "3":
+          print(f"Sonuç: {sayi1} x {sayi2} = {sayi1 * sayi2}")
+       elif secim == "4":
+          if sayi2 == 0:
+           print("Hataa! Bir sayi sifira bölünmez...")
+          else:
+             print(f"Sonuç: {sayi1}/{sayi2} = {sayi1 / sayi2}")
+    else:
+       print("Geçersiz seçim! Lütfen 1-5 arasinda bir değer giriniz.")
+
+print("Hoşçakalin...")
+
